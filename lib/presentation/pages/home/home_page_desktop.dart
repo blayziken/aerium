@@ -64,9 +64,11 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
               children: <Widget>[
                 Row(
                   children: <Widget>[
+
+                    
                     ContentWrapper(
                       width: assignWidth(context: context, fraction: 0.5),
-                      color: AppColors.primaryColor,
+                      color: Colors.blue, // AppColors.primaryColor,
                       child: Container(
                         margin: EdgeInsets.only(
                           left: Sizes.MARGIN_20,
@@ -149,20 +151,17 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
           isDisplaySmallDesktop(context)
               ? FutureBuilder<ui.Image>(
                   future: _getImage(),
-                  builder:
-                      (BuildContext context, AsyncSnapshot<ui.Image> snapshot) {
+                  builder: (BuildContext context, AsyncSnapshot<ui.Image> snapshot) {
                     if (snapshot.hasData) {
                       ui.Image image = snapshot.data!;
                       return Positioned(
                         top: assignHeight(context: context, fraction: 0.0),
-                        left: assignWidth(context: context, fraction: 0.5) -
-                            (image.width + 100.0) / 2,
+                        left: assignWidth(context: context, fraction: 0.5) - (image.width + 100.0) / 2,
                         child: Container(
                           child: Image.asset(
                             ImagePath.DEV,
                             width: (image.width + 100.0),
-                            height:
-                                assignHeight(context: context, fraction: 1.0),
+                            height: assignHeight(context: context, fraction: 1.0),
                             fit: BoxFit.cover,
                             scale: 1.0,
                           ),
@@ -175,8 +174,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                 )
               : Positioned(
                   top: assignHeight(context: context, fraction: 0.05),
-                  left: assignWidth(context: context, fraction: 0.5) -
-                      widthOfImage / 2,
+                  left: assignWidth(context: context, fraction: 0.5) - widthOfImage / 2,
                   child: Container(
                     child: Image.asset(
                       ImagePath.DEV,

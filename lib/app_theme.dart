@@ -16,7 +16,7 @@ class AppTheme {
       colorScheme: colorScheme,
       textTheme: _textTheme,
       iconTheme: IconThemeData(color: AppColors.white),
-      canvasColor: colorScheme.background,
+      canvasColor: colorScheme.backgrou nd,
       appBarTheme: AppBarTheme(
         color: AppColors.deepBlue700,
       ),
